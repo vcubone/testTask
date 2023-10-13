@@ -72,7 +72,7 @@ String            |  http://localhost:8080/string
 Map               |http://localhost:8080/map
 Swagger           |  http://localhost:8080/swagger-ui/
 ```
-IN: String. String.length < 1000000
+IN: String. String.length < 1000
 OUT /string: String. Like: "character": frequence, ...
 OUT /map: Map<Character, Integer>
 ```

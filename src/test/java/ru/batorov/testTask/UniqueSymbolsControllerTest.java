@@ -34,7 +34,7 @@ class UniqueSymbolsControllerTest {
 	private ObjectMapper objectMapper;
 	private String strURL = "/string";
 	private String mapURL = "/map";
-	private int maxLength = (int) Math.pow(10, 6);
+	private int maxLength = (int) Math.pow(10, 3);
 
 	public UniqueSymbolsControllerTest() {
 	}

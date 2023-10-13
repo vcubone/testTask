@@ -29,7 +29,7 @@ import ru.batorov.testTask.utils.exceptions.StringLengthOutOfBoundException;
 public class UniqueSymbolsController {
 
 	private final UniqueSymbolsService uniqueSymbolsService;
-	private final int maxLength = (int) Math.pow(10, 6);
+	private final int maxLength = (int) Math.pow(10, 3);
 
 	public UniqueSymbolsController(UniqueSymbolsService uniqueSymbolsService) {
 		this.uniqueSymbolsService = uniqueSymbolsService;
@@ -41,7 +41,7 @@ public class UniqueSymbolsController {
 		@ApiResponse(responseCode = "415", description = "String must be valid"),
 		@ApiResponse(responseCode = "422", description = "String's length must be valid")
 	})
-	public String stingOfUniqueSymbols(@RequestBody() @Parameter(name = "String", description = "Original string(Max length: 1000000)") String str) {// 
+	public String stingOfUniqueSymbols(@RequestBody() @Parameter(name = "String", description = "Original string(Max length: 1000)") String str) {// 
 		if (maxLength <= str.length())
 			throw new StringLengthOutOfBoundException();
 
@@ -54,7 +54,7 @@ public class UniqueSymbolsController {
 		@ApiResponse(responseCode = "415", description = "String must be valid"),
 		@ApiResponse(responseCode = "422", description = "String's length must be valid")
 	})
-	public Map<Character, Integer> mapOfUniqueSymbols(@RequestBody @Parameter(name = "String", description = "Original string(Max length: 1000000)") String str) {
+	public Map<Character, Integer> mapOfUniqueSymbols(@RequestBody @Parameter(name = "String", description = "Original string(Max length: 1000)") String str) {
 		if (maxLength < str.length())
 			throw new StringLengthOutOfBoundException();
 
