@@ -1,6 +1,6 @@
 # Test-task
 ## Test task with SpringBoot (Java) Backend
-The solution of a test problem.
+The solution of a test task.
 
 ### Technology Stack
 Component           | Technology
@@ -8,6 +8,7 @@ Component           | Technology
 Backend (REST)      | [SpringBoot](http://localhost:8080/string, http://localhost:8080/map) 
 Server Build Tools  | Maven(Java) or Gradle
 Documentation tools | Swagger
+Test Tools          | Junit
 
 ## Folder Structure
 ```bash
@@ -30,11 +31,12 @@ PROJECT_FOLDER
 Ensure you have this installed before proceeding further
 - Java 19
 - Maven 2.7.13
+- Docker(Optional)
 
 ## About
-This is an implementation of an library website with authentication and authorization .
+This is the solution of a test task.
 The goal of the project is to 
-- Highlight techniques of making a website using [SpringBoot](https://projects.spring.io/spring-boot)
+- Highlight techniques of making a rest api
 
 ### Features of the Project
 * Backend
@@ -64,15 +66,16 @@ services:
 docker-compose up
 ```
 ### Accessing Application
-Cpmponent         | URL
+Component         | URL
 ---               | ---
-API               |  http://localhost:8080/string
-                  |  in: String. String.length < 1000000
-                  |  out: String. Like: "character": frequence, ...
-                  |http://localhost:8080/map
-                  |  in: String. String.length < 1000000
-                  |  out: Map<Character, Integer>
+String            |  http://localhost:8080/string
+Map               |http://localhost:8080/map
 Swagger           |  http://localhost:8080/swagger-ui/
+```
+IN: String. String.length < 1000000
+OUT /string: String. Like: "character": frequence, ...
+OUT /map: Map<Character, Integer>
+```
 ### Screenshots
 #### Swagger
 ![Dashboard](/screenshots/swagger.png?raw=true)
